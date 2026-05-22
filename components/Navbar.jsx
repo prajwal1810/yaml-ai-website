@@ -21,7 +21,9 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition ${
-        scrolled ? 'border-b border-line/80 bg-white/82 shadow-sm backdrop-blur-xl' : 'bg-white/55 backdrop-blur-sm'
+        scrolled
+          ? 'border-b border-white/30 bg-white/10 shadow-sm backdrop-blur-xl'
+          : 'bg-transparent'
       }`}
     >
       <nav className="container-x flex h-20 items-center justify-between">
@@ -37,8 +39,8 @@ export function Navbar() {
             const active = pathname === link.href;
             return (
               <Link
-                className={`text-sm font-semibold transition hover:text-skybrand ${
-                  active ? 'text-ink' : 'text-slate-500'
+                className={`text-sm font-semibold transition hover:text-sky-900 ${
+                  active ? 'text-ink' : 'text-slate-700'
                 }`}
                 href={link.href}
                 key={link.href}
