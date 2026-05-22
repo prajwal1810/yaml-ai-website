@@ -38,6 +38,7 @@
     html {
       scroll-behavior: smooth;
       background: var(--bg);
+      overflow-x: hidden;
     }
 
     body {
@@ -518,6 +519,8 @@
       overflow: hidden;
       padding: 18px 0;
       white-space: nowrap;
+      max-width: 100vw;
+      contain: paint;
     }
 
     .marquee-track {
@@ -1111,6 +1114,55 @@
       font-style: normal;
     }
 
+    .scorecard {
+      background:
+        linear-gradient(135deg, rgba(215, 168, 78, 0.08), transparent 40%),
+        var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 0.95fr 1.05fr;
+      margin-top: 34px;
+      padding: 30px;
+    }
+
+    .scorecard h3 {
+      font-size: clamp(26px, 3vw, 40px);
+      margin-bottom: 14px;
+    }
+
+    .scorecard p {
+      color: var(--text-secondary);
+    }
+
+    .score-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .score-row {
+      align-items: center;
+      background: rgba(246, 241, 231, 0.03);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: grid;
+      gap: 14px;
+      grid-template-columns: 92px 1fr;
+      padding: 14px;
+    }
+
+    .score-row strong {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 13px;
+    }
+
+    .score-row span {
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+
     .industry-grid {
       display: grid;
       gap: 16px;
@@ -1159,11 +1211,45 @@
       overflow: hidden;
     }
 
+    .pilot-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .pilot-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+
+    .pilot-card strong {
+      color: var(--brass);
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 12px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .pilot-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .pilot-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
     .badge-row {
       display: flex;
       overflow: hidden;
       padding: 8px 0;
       white-space: nowrap;
+      max-width: 100vw;
+      contain: paint;
     }
 
     .badge-track {
@@ -1196,17 +1282,17 @@
         #080A07;
       border-bottom: 1px solid var(--border);
       border-top: 1px solid var(--border);
-      text-align: center;
+      text-align: left;
     }
 
     .cta .container {
-      max-width: 900px;
+      max-width: 1160px;
     }
 
     .cta p {
       color: var(--text-secondary);
       font-size: 18px;
-      margin: 24px auto 0;
+      margin: 24px 0 0;
       max-width: 650px;
     }
 
@@ -1222,6 +1308,103 @@
       font-family: var(--font-mono);
       font-size: 12px;
       margin-top: 18px;
+    }
+
+    .contact-grid {
+      align-items: start;
+      display: grid;
+      gap: 42px;
+      grid-template-columns: 0.9fr 1.1fr;
+    }
+
+    .contact-points {
+      display: grid;
+      gap: 12px;
+      margin-top: 28px;
+      max-width: 620px;
+    }
+
+    .contact-point {
+      align-items: start;
+      border-top: 1px solid var(--border);
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 96px 1fr;
+      padding-top: 14px;
+    }
+
+    .contact-point strong {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .contact-point span {
+      color: var(--text-secondary);
+    }
+
+    .contact-form {
+      background: rgba(16, 19, 15, 0.92);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      display: grid;
+      gap: 16px;
+      padding: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field label {
+      color: var(--text-secondary);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      background: #0B0E09;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font: inherit;
+      min-height: 48px;
+      padding: 12px 13px;
+      width: 100%;
+    }
+
+    .field textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--border-accent);
+      box-shadow: 0 0 0 3px var(--accent-dim);
+      outline: none;
+    }
+
+    .hidden-field {
+      display: none;
+    }
+
+    .form-note {
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 12px;
     }
 
     .footer {
@@ -1403,6 +1586,8 @@
       .hero-grid,
       .services-shell,
       .proof-grid,
+      .scorecard,
+      .contact-grid,
       .footer-grid {
         grid-template-columns: 1fr;
       }
@@ -1479,6 +1664,7 @@
 
       .stats,
       .timeline,
+      .pilot-grid,
       .industry-grid {
         grid-template-columns: 1fr;
       }
@@ -1530,6 +1716,12 @@
         grid-template-columns: 1fr;
       }
 
+      .form-row,
+      .contact-point,
+      .score-row {
+        grid-template-columns: 1fr;
+      }
+
       .footer {
         padding-bottom: 22px;
       }
@@ -1558,7 +1750,7 @@
         <a href="#contact">Contact</a>
       </div>
       <div class="nav-actions">
-        <a class="btn btn-ghost" href="#" aria-label="Book a free call">Book a free call</a>
+        <a class="btn btn-ghost" href="#contact" aria-label="Book a free call">Book a free call</a>
         <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <span aria-hidden="true"></span>
         </button>
@@ -1571,7 +1763,7 @@
     <a href="#how">How it works</a>
     <a href="#results">Results</a>
     <a href="#contact">Contact</a>
-    <a href="#">Book a free call</a>
+    <a href="#contact">Book a free call</a>
   </div>
 
   <main id="top">
@@ -1580,12 +1772,12 @@
         <div class="hero-copy">
           <span class="eyebrow">AI automation for Indian SMBs</span>
           <h1>Stop doing <span class="serif-accent">manually</span> what AI can do better.</h1>
-          <p>YAML AI builds voice agents, WhatsApp bots, and workflow automations that your team actually uses. Shipped in weeks, not months.</p>
+          <p>YAML AI builds voice agents, WhatsApp bots, and workflow automations for teams that live in calls, calendars, CRMs, and WhatsApp. Built as a working pilot first, then expanded only if the numbers make sense.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#services">See what we build</a>
-            <a class="btn btn-ghost" href="#">Book a free 30-min call &rarr;</a>
+            <a class="btn btn-ghost" href="#contact">Book a free 30-min call &rarr;</a>
           </div>
-          <div class="hero-note">No bloated decks. We map the work, ship the system, and measure what changed.</div>
+          <div class="hero-note">Start with one painful workflow: missed leads, reminder calls, CRM updates, or support replies. We automate that first.</div>
         </div>
 
         <div class="chat-card" aria-label="Live WhatsApp agent conversation mockup">
@@ -1754,9 +1946,46 @@
           </div>
         </div>
 
-        <div class="quote reveal">
-          <blockquote>&ldquo;We went from missing 30% of our inbound leads to zero drop-offs. The WhatsApp agent alone paid for itself in the first week.&rdquo;</blockquote>
-          <cite>&mdash; <strong>Vikram S.</strong>, Owner, AutoDeal Pune</cite>
+        <div class="scorecard reveal">
+          <div>
+            <span class="eyebrow">Pilot scorecard</span>
+            <h3>We judge the pilot by numbers, not vibes.</h3>
+            <p>Before we build, we agree what success should look like. If the automation does not improve the workflow, we say that clearly and fix the system or stop there.</p>
+          </div>
+          <div class="score-list">
+            <div class="score-row"><strong>Lead speed</strong><span>How quickly a fresh enquiry gets a call, WhatsApp reply, or booking link.</span></div>
+            <div class="score-row"><strong>Drop-offs</strong><span>How many leads go untouched after hours, weekends, or staff handoffs.</span></div>
+            <div class="score-row"><strong>Manual time</strong><span>How many repetitive staff hours disappear from reminders, logging, and follow-ups.</span></div>
+            <div class="score-row"><strong>Data quality</strong><span>Whether CRM records are complete enough for the next sales action.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">First 14 days</span>
+          <h2>What your first pilot includes</h2>
+          <p>Small enough to ship. Serious enough to prove value. We do not start with a giant transformation plan.</p>
+        </div>
+
+        <div class="pilot-grid">
+          <article class="pilot-card">
+            <strong>01 / Audit</strong>
+            <h3>Workflow teardown</h3>
+            <p>We review one current flow: lead capture, appointment booking, customer support, or CRM updates. You show us the messy version, not a polished diagram.</p>
+          </article>
+          <article class="pilot-card">
+            <strong>02 / Build</strong>
+            <h3>Working automation</h3>
+            <p>We connect the minimum tools needed, write the agent logic, test real scenarios, and hand over a pilot your team can use.</p>
+          </article>
+          <article class="pilot-card">
+            <strong>03 / Improve</strong>
+            <h3>Measured rollout</h3>
+            <p>We track response time, completion rate, errors, and staff feedback. Then we tighten prompts, rules, and handoffs before scaling.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -1872,10 +2101,63 @@
 
     <section class="section cta reveal" id="contact">
       <div class="container">
-        <h2>Ready to stop losing time to work AI can do?</h2>
-        <p>Book a free 30-minute discovery call. No pitch, no fluff. Just a look at where automation fits your business.</p>
-        <a class="btn btn-primary" href="#">Book your free call &rarr;</a>
-        <div class="cta-note">No commitment. We'll tell you honestly if automation is the right fit.</div>
+        <div class="contact-grid">
+          <div>
+            <span class="eyebrow">Automation audit</span>
+            <h2>Tell us the workflow you want off your plate.</h2>
+            <p>Send a few details. We will reply with the most practical first automation to build, what tools it needs, and whether it is worth doing now.</p>
+            <div class="contact-points">
+              <div class="contact-point"><strong>Best fit</strong><span>Lead follow-up, WhatsApp replies, appointment booking, CRM sync, support triage.</span></div>
+              <div class="contact-point"><strong>Reply time</strong><span>Usually within 1 business day. Faster if the problem is clear.</span></div>
+              <div class="contact-point"><strong>No pitch</strong><span>If automation is not the right fix, we will say that instead of forcing a project.</span></div>
+            </div>
+          </div>
+
+          <form class="contact-form" name="automation-audit" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="automation-audit">
+            <p class="hidden-field">
+              <label>Do not fill this out: <input name="bot-field"></label>
+            </p>
+            <div class="form-row">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" name="name" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="company">Business</label>
+                <input id="company" name="company" autocomplete="organization" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="phone">WhatsApp / phone</label>
+                <input id="phone" name="phone" autocomplete="tel">
+              </div>
+            </div>
+            <div class="field">
+              <label for="workflow">What should AI handle first?</label>
+              <select id="workflow" name="workflow" required>
+                <option value="">Choose one</option>
+                <option>Calling new leads</option>
+                <option>WhatsApp replies and follow-ups</option>
+                <option>Appointment booking and reminders</option>
+                <option>CRM updates and reporting</option>
+                <option>Customer support questions</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">What is happening manually right now?</label>
+              <textarea id="message" name="message" placeholder="Example: Our receptionist calls every lead from Facebook forms, books slots in Google Calendar, then updates Zoho manually." required></textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">Send workflow for review &rarr;</button>
+            <div class="form-note">This form is wired for Netlify Forms. Submissions will appear in your Netlify dashboard after the next deploy.</div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -1894,17 +2176,17 @@
             <a href="#services">Services</a>
             <a href="#how">How it works</a>
             <a href="#contact">Contact</a>
-            <a href="#">Privacy</a>
+            <a href="mailto:hello@yamlai.in?subject=Privacy%20question%20for%20YAML%20AI">Privacy</a>
           </div>
         </div>
         <div>
           <div class="footer-title">Talk to us</div>
           <a href="mailto:hello@yamlai.in">hello@yamlai.in</a>
           <div class="socials">
-            <a class="social" href="#" aria-label="WhatsApp">
+            <a class="social" href="#contact" aria-label="WhatsApp contact form">
               <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19l1.2-3.6A7 7 0 1 1 9 18.2L5 19z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9.5 8.7c.3 2 1.8 3.6 3.8 4.1l1.2-1.1 2 .7-.4 2c-.2.7-.9 1.1-1.6.9-4.1-.9-6.6-3.4-7.7-7.2-.2-.7.2-1.4.9-1.6l2-.5.8 2.1-1 1z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
             </a>
-            <a class="social" href="#" aria-label="LinkedIn">
+            <a class="social" href="https://www.linkedin.com/search/results/companies/?keywords=YAML%20AI" aria-label="Find YAML AI on LinkedIn">
               <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 10v8M6.5 7v.01M11 18v-8M11 13.5c0-2.2 1.2-3.7 3.2-3.7S17.5 11.1 17.5 14v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
             </a>
           </div>
@@ -2067,6 +2349,24 @@
       requestAnimationFrame(tick);
     }
 
+    function revealVisibleSections() {
+      revealItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        const entersViewport = rect.top < window.innerHeight * 0.92 && rect.bottom > 0;
+        if (entersViewport) item.classList.add('visible');
+      });
+    }
+
+    function settleHashTarget() {
+      if (!window.location.hash) return;
+      const target = document.querySelector(window.location.hash);
+      if (!target) return;
+      setTimeout(() => {
+        target.scrollIntoView({ block: 'start' });
+        revealVisibleSections();
+      }, 80);
+    }
+
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -2094,6 +2394,11 @@
 
     revealItems.forEach((item) => revealObserver.observe(item));
     statObserver.observe(statSection);
+    window.addEventListener('load', () => {
+      revealVisibleSections();
+      settleHashTarget();
+    });
+    window.addEventListener('hashchange', settleHashTarget);
     setNavState();
     renderService('voice');
     runHeroChat();
