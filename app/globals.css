@@ -51,6 +51,45 @@ a {
   background-size: 44px 44px;
 }
 
+.hero-video-scene {
+  min-height: 640px;
+  background: #f8fbff;
+}
+
+.hero-video-scene::before,
+.hero-video-scene::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.hero-video-scene::before {
+  z-index: 1;
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.36), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.86));
+}
+
+.hero-video-scene::after {
+  z-index: 0;
+  background:
+    radial-gradient(circle at 16% 10%, rgba(56, 189, 248, 0.18), transparent 34%),
+    radial-gradient(circle at 88% 72%, rgba(14, 165, 233, 0.16), transparent 30%);
+}
+
+.hero-bg-video {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.9;
+  filter: saturate(1.08) contrast(1.02);
+}
+
 .glass-light {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(226, 232, 240, 0.9);
@@ -108,7 +147,7 @@ a {
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0;
-  color: #0ea5e9;
+  color: #075985;
 }
 
 .focus-ring {
@@ -145,6 +184,14 @@ a {
 
   .marquee-shell {
     mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+  }
+
+  .hero-video-scene {
+    min-height: 620px;
+  }
+
+  .hero-bg-video {
+    object-position: center top;
   }
 
 }

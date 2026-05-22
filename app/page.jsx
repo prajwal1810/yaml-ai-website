@@ -10,8 +10,18 @@ import { caseStudies, services, testimonials } from '@/data/site';
 export default function HomePage() {
   return (
     <>
-      <section className="soft-grid relative overflow-hidden pt-32">
-        <div className="floating-wash absolute left-1/2 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-skybrand/10 blur-3xl" />
+      <section className="hero-video-scene relative overflow-hidden pt-32">
+        <video
+          aria-hidden="true"
+          autoPlay
+          className="hero-bg-video"
+          loop
+          muted
+          playsInline
+          poster="/hero-background.png"
+        >
+          <source src="/hero-background-video.mp4" type="video/mp4" />
+        </video>
         <div className="container-x relative z-10 pb-20 lg:pb-28">
           <Reveal className="mx-auto max-w-5xl text-center">
             <p className="mb-5 inline-flex rounded-full border border-line bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-skybrand shadow-sm">
