@@ -17,8 +17,8 @@ export function LogoCloud() {
   const strip = [...logos, ...logos];
 
   return (
-    <section className="border-y border-sky-100 bg-gradient-to-r from-sky-50 via-white to-sky-50 py-7 sm:py-8">
-      <div className="container-x grid items-center gap-5 lg:grid-cols-[260px_1fr]">
+    <section className="relative z-20 -mt-16 pb-10 sm:-mt-20">
+      <div className="container-x grid items-center gap-5 rounded-[2rem] border border-sky-100/80 bg-white/50 px-5 py-5 shadow-[0_24px_80px_rgba(14,165,233,0.11)] backdrop-blur-xl sm:px-7 lg:grid-cols-[260px_1fr]">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-skybrand">Integrations</p>
           <p className="mt-1 text-sm font-semibold text-slate-600">Works with the tools your team already uses</p>
