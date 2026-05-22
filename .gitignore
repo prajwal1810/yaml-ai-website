@@ -1,0 +1,7 @@
+node_modules/
+.next/
+out/
+manual_packages/
+swc_extract/
+package-lock.json
+npm-debug.log*
