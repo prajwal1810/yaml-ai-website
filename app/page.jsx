@@ -1,7 +1,6 @@
 import { Button } from '@/components/Button';
 import { CTA } from '@/components/CTA';
 import { LogoCloud } from '@/components/LogoCloud';
-import { ProductMockup } from '@/components/ProductMockup';
 import { Reveal } from '@/components/Reveal';
 import { SectionHeader } from '@/components/SectionHeader';
 import { ServiceCard } from '@/components/ServiceCard';
@@ -13,25 +12,21 @@ export default function HomePage() {
     <>
       <section className="soft-grid relative overflow-hidden pt-32">
         <div className="floating-wash absolute left-1/2 top-20 h-72 w-72 -translate-x-1/2 rounded-full bg-skybrand/10 blur-3xl" />
-        <div className="container-x grid items-center gap-14 pb-20 lg:grid-cols-[1.02fr_0.98fr] lg:pb-28">
-          <Reveal>
+        <div className="container-x relative z-10 pb-20 lg:pb-28">
+          <Reveal className="mx-auto max-w-5xl text-center">
             <p className="mb-5 inline-flex rounded-full border border-line bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-skybrand shadow-sm">
               AI automation for modern operators
             </p>
             <h1 className="font-display text-balance text-5xl font-bold tracking-[-0.055em] text-ink sm:text-6xl lg:text-7xl">
               Turn <span className="sentence-accent">manual workflows</span> into reliable AI systems.
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600">
-              YAML AI builds WhatsApp agents, voice agents, CRM automations, and support workflows that help teams respond faster, qualify better, and scale without adding busywork.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-16 flex flex-col justify-center gap-3 sm:mt-20 sm:flex-row">
               <Button href="/contact">Book consultation</Button>
               <Button href="/services" variant="secondary">
                 Explore services
               </Button>
             </div>
           </Reveal>
-          <ProductMockup />
         </div>
       </section>
 

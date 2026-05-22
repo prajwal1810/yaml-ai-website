@@ -57,7 +57,7 @@ export function Navbar() {
 
         <button
           aria-label="Toggle navigation"
-          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-sm font-bold lg:hidden"
+          className="focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full border border-line bg-white text-sm font-bold text-ink lg:hidden"
           onClick={() => setOpen((value) => !value)}
           type="button"
         >
