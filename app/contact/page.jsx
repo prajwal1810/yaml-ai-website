@@ -30,7 +30,7 @@ export default function ContactPage() {
             </a>
             <a
               className="rounded-3xl border border-line bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-skybrand/30"
-              href="https://wa.me/919000000000?text=Hi%20YAML%20AI%2C%20I%20want%20to%20discuss%20automation"
+              href="https://wa.me/918149351697?text=hii%20i%20need%20automation"
               rel="noreferrer"
               target="_blank"
             >

@@ -30,9 +30,14 @@ export function Footer() {
             <Link className="transition hover:text-skybrand" href="/contact">
               Book a discovery call
             </Link>
-            <Link className="transition hover:text-skybrand" href="/contact">
+            <a
+              className="transition hover:text-skybrand"
+              href="https://wa.me/918149351697?text=hii%20i%20need%20automation"
+              rel="noreferrer"
+              target="_blank"
+            >
               WhatsApp YAML AI
-            </Link>
+            </a>
           </div>
         </div>
       </div>
