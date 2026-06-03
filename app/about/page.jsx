@@ -2,7 +2,18 @@ import { CTA } from '@/components/CTA';
 import { SectionHeader } from '@/components/SectionHeader';
 
 export const metadata = {
-  title: 'About'
+  title: 'About YAML AI',
+  description:
+    'Learn about YAML AI, an India-focused AI automation company building practical AI agents, CRM workflows and lead conversion systems.',
+  alternates: {
+    canonical: '/about/'
+  },
+  openGraph: {
+    title: 'About YAML AI',
+    description:
+      'YAML AI builds practical AI automation systems for real businesses: lead response, customer support, CRM hygiene and booking flows.',
+    url: 'https://yamlai.in/about/'
+  }
 };
 
 export default function AboutPage() {

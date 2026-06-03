@@ -2,7 +2,18 @@ import { ContactForm } from '@/components/ContactForm';
 import { SectionHeader } from '@/components/SectionHeader';
 
 export const metadata = {
-  title: 'Contact'
+  title: 'Contact YAML AI',
+  description:
+    'Contact YAML AI to discuss AI agents, real estate automation, WhatsApp automation, CRM workflows and lead conversion systems.',
+  alternates: {
+    canonical: '/contact/'
+  },
+  openGraph: {
+    title: 'Contact YAML AI',
+    description:
+      'Book a consultation or send your automation brief to YAML AI for practical AI workflow recommendations.',
+    url: 'https://yamlai.in/contact/'
+  }
 };
 
 export default function ContactPage() {

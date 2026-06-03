@@ -7,6 +7,29 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { StatsGrid } from '@/components/StatsGrid';
 import { caseStudies, services, testimonials } from '@/data/site';
 
+const faqs = [
+  [
+    'What is YAML AI?',
+    'YAML AI is an AI automation company that helps real estate professionals and businesses automate lead response, follow-ups, CRM updates, appointment booking and customer communication.'
+  ],
+  [
+    'How does AI automation help real estate agents in India?',
+    'AI automation helps real estate agents respond to leads instantly, send follow-up messages, qualify buyers, schedule site visits and keep CRM data updated without manual work.'
+  ],
+  [
+    'Does YAML AI work for Indian real estate teams?',
+    'Yes. YAML AI is designed for Indian businesses and can support workflows around WhatsApp, voice calls, lead forms, property inquiries, CRM tools and appointment booking.'
+  ],
+  [
+    'How does YAML AI build an automation?',
+    'We start with a discovery call, map the workflow, design the automation logic, connect your tools, test the handoffs and launch the first working version with your team.'
+  ],
+  [
+    'How much time is required to launch?',
+    'Most focused automations can go live in 2 to 4 weeks, depending on the workflow, integrations and testing needed.'
+  ]
+];
+
 export default function HomePage() {
   return (
     <>
@@ -129,6 +152,33 @@ export default function HomePage() {
                   </figcaption>
                 </figure>
               </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="container-x grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <SectionHeader
+            eyebrow="FAQ"
+            title={
+              <>
+                Questions teams ask before using <span className="sentence-accent">AI automation</span>.
+              </>
+            }
+            copy="Short answers on how YAML AI fits into real workflows, from lead response to CRM updates."
+          />
+          <div className="grid gap-4">
+            {faqs.map(([question, answer]) => (
+              <details className="faq-item rounded-3xl border border-line bg-white p-6 shadow-soft" key={question}>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-5 font-display text-xl font-bold tracking-[-0.03em] text-ink">
+                  <span>{question}</span>
+                  <span className="faq-icon grid h-8 w-8 shrink-0 place-items-center rounded-full border border-sky-100 bg-skysoft text-skybrand">
+                    +
+                  </span>
+                </summary>
+                <p className="mt-4 leading-7 text-slate-600">{answer}</p>
+              </details>
             ))}
           </div>
         </div>

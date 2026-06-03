@@ -4,7 +4,18 @@ import { SectionHeader } from '@/components/SectionHeader';
 import { solutions } from '@/data/site';
 
 export const metadata = {
-  title: 'Solutions'
+  title: 'AI Automation Solutions for Indian Businesses',
+  description:
+    'Industry-specific AI automation solutions for real estate, healthcare, education and local businesses in India.',
+  alternates: {
+    canonical: '/solutions/'
+  },
+  openGraph: {
+    title: 'AI Automation Solutions for Indian Businesses | YAML AI',
+    description:
+      'See how YAML AI builds practical automation workflows for real estate, healthcare, education and local business teams.',
+    url: 'https://yamlai.in/solutions/'
+  }
 };
 
 export default function SolutionsPage() {

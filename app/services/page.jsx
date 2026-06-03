@@ -4,7 +4,18 @@ import { ServiceCard } from '@/components/ServiceCard';
 import { services } from '@/data/site';
 
 export const metadata = {
-  title: 'Services'
+  title: 'AI Automation Services for Real Estate',
+  description:
+    "Explore YAML AI's real estate automation services. From AI lead agents to property listing automation, save time, respond faster and close more deals.",
+  alternates: {
+    canonical: '/services/'
+  },
+  openGraph: {
+    title: 'AI Automation Services for Real Estate | YAML AI',
+    description:
+      "Explore YAML AI's real estate automation services, including AI lead agents, WhatsApp automation, CRM workflows and appointment booking.",
+    url: 'https://yamlai.in/services/'
+  }
 };
 
 export default function ServicesPage() {

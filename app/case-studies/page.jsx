@@ -3,7 +3,18 @@ import { SectionHeader } from '@/components/SectionHeader';
 import { caseStudies } from '@/data/site';
 
 export const metadata = {
-  title: 'Case Studies'
+  title: 'AI Automation Case Studies',
+  description:
+    'See YAML AI case studies showing faster lead response, fewer manual follow-ups, cleaner CRM data and stronger customer workflows.',
+  alternates: {
+    canonical: '/case-studies/'
+  },
+  openGraph: {
+    title: 'AI Automation Case Studies | YAML AI',
+    description:
+      'Real before-and-after examples of practical AI automation for lead response, appointment reminders and CRM workflows.',
+    url: 'https://yamlai.in/case-studies/'
+  }
 };
 
 export default function CaseStudiesPage() {
