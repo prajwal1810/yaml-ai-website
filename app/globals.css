@@ -138,6 +138,25 @@ a {
   box-shadow: 0 26px 80px rgba(15, 23, 42, 0.12);
 }
 
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 14%, rgba(14, 165, 233, 0.11), transparent 26%),
+    linear-gradient(120deg, transparent 0%, rgba(14, 165, 233, 0.08) 42%, transparent 62%);
+  opacity: 0;
+  transform: translateX(-22%);
+  transition:
+    opacity 320ms ease,
+    transform 520ms ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .text-balance {
   text-wrap: balance;
 }
