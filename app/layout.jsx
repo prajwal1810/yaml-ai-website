@@ -3,6 +3,7 @@ import './globals.css';
 import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
 import { WhatsAppSupport } from '@/components/WhatsAppSupport';
+import { AnimatedCursor } from '@/components/AnimatedCursor';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -195,6 +196,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <WhatsAppSupport />
+        <AnimatedCursor />
       </body>
     </html>
   );
