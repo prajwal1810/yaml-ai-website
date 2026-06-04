@@ -2,6 +2,7 @@ import { Instrument_Serif, Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 import { Footer } from '@/components/Footer';
 import { Navbar } from '@/components/Navbar';
+import { WhatsAppSupport } from '@/components/WhatsAppSupport';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -193,6 +194,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppSupport />
       </body>
     </html>
   );

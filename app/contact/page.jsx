@@ -1,6 +1,8 @@
 import { ContactForm } from '@/components/ContactForm';
 import { SectionHeader } from '@/components/SectionHeader';
 
+const calendlyUrl = 'https://calendly.com/prajwalmurkewar/30min';
+
 export const metadata = {
   title: 'Contact YAML AI',
   description:
@@ -33,11 +35,11 @@ export default function ContactPage() {
           <div className="mt-8 grid gap-3">
             <a
               className="rounded-3xl border border-line bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-skybrand/30"
-              href="https://calendly.com/yamlai/demo"
+              href={calendlyUrl}
               rel="noreferrer"
               target="_blank"
             >
-              Calendly integration placeholder
+              Book directly on Calendly
             </a>
             <a
               className="rounded-3xl border border-line bg-white p-5 font-semibold text-ink shadow-soft transition hover:border-skybrand/30"
@@ -51,6 +53,22 @@ export default function ContactPage() {
         </div>
 
         <ContactForm />
+      </div>
+      <div className="container-x pb-20">
+        <section className="overflow-hidden rounded-[2rem] border border-sky-100 bg-white shadow-card">
+          <div className="border-b border-line px-5 py-5 sm:px-7">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-skybrand">Schedule a call</p>
+            <h2 className="mt-2 font-display text-3xl font-bold tracking-[-0.04em] text-ink">
+              Pick a time that works for you.
+            </h2>
+          </div>
+          <iframe
+            className="h-[760px] w-full border-0"
+            loading="lazy"
+            src={calendlyUrl}
+            title="Schedule a YAML AI consultation on Calendly"
+          />
+        </section>
       </div>
     </section>
   );
